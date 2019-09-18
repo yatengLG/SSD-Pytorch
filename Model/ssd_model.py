@@ -3,7 +3,7 @@
 import torch
 from torch import nn
 from .base_models import vgg
-from .structs import predictor, multiboxloss, postprocessor, priorbox
+from .structs import predictor,  postprocessor, priorbox
 from vizer.draw import draw_boxes
 from PIL import Image
 from Data.Transfroms import SSDTramsfrom
