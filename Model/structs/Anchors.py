@@ -2,7 +2,7 @@
 # @Author  : LG
 import torch
 from math import sqrt
-
+from Utils import center_form_to_corner_form,corner_form_to_center_form
 __all__ = ['priorbox']
 
 class priorbox:
@@ -50,8 +50,11 @@ class priorbox:
                         priors.append([cx, cy, w / ratio, h * ratio])
 
         priors = torch.tensor(priors)
+
         if self.clip:
+            priors = center_form_to_corner_form(priors)
             priors.clamp_(max=1, min=0)
+            priors = corner_form_to_center_form(priors)
         return priors
 
 
@@ -59,6 +62,4 @@ if __name__ == '__main__':
     # 运行 查看生成的 检测框
     from Configs import _C as cfg
     boxes = priorbox(cfg = cfg)()
-    for box in boxes:
-        print(box)
     print(len(boxes))
