@@ -3,44 +3,7 @@
 import numpy as np
 import cv2
 from tqdm import tqdm
-import json
 import os
-import shutil
-
-def json_to_txt(json_file, root):
-    """
-    解析json文件
-            文件名是图片名,
-            数据以   label1, x1, y1, w1, h1
-                    label2, x2, y2, w2, h2
-            格式存放
-    eg:
-        json_to_txt('/home/super/guangdong1_round1_train1_20190809/Annotations/gt_result.json',
-                    '/home/super/guangdong1_round1_train1_20190809/Our')
-
-    :param json_file:
-    :param root:
-    :return:
-    """
-    if os.path.exists(root):
-        shutil.rmtree(root)
-    os.mkdir(root)
-
-    with open(json_file, 'r')as f:
-        json_dict_list = json.load(f)
-        for json_dict in json_dict_list:
-            name = json_dict['name']
-            defect_name = json_dict['defect_name']
-            bbox = json_dict['bbox']
-            content = [defect_name]
-            for xywh in bbox:
-                content.append(str(xywh))
-            content = ','.join(content)
-
-            with open(os.path.join(root, name.split('.')[0] + '.txt'), 'a')as f:
-                f.write(content + '\n')
-    return True
-
 
 def cal_mean_std(images_dir):
     """
