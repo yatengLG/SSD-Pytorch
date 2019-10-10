@@ -6,6 +6,8 @@ SSD目标检测算法(Single Shot MultiBox Detector)(简单,明了,易用,中文
 
 全中文备注,详细说明每一步步骤.
 
+![image](Images/000133_det.jpg)
+
 ***
 ## 特点
 相较于其他SSD项目,本项目在模型实现上更为合理.多GPU调用方面更加简单灵活.
@@ -66,7 +68,6 @@ SSD目标检测算法(Single Shot MultiBox Detector)(简单,明了,易用,中文
 | | ssd_model|SSD模型类 |
 | | trainer|训练器,用于在数据集上训练模型 |
 | **Utils**|各种工具|
-| |boxs_op |各种框体操作,编码解码,IOU计算,框体格式转换等|
 | |boxs_op |各种框体操作,编码解码,IOU计算,框体格式转换等|
 | **Weights**| 模型权重存放处|
 | | pretrained|预训练模型权重存放处|
