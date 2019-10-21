@@ -1,7 +1,8 @@
 # SSD-Pytorch 
 
-
 SSD目标检测算法(Single Shot MultiBox Detector)(简单,明了,易用,中文注释)
+
+(If you train the model on a single computer and mutil GPU, this program will be your best choice , easier to use and easier to understand)
 
 模型.训练.检测等流程全部面向对象实现,简单易用.
 
