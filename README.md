@@ -114,7 +114,7 @@ python -m visdom.server     运行
 **训练器支持单机单卡,单机多卡训练,不支持多机多卡以及cpu.**
 
 训练例子:
-```text
+```python
     # 实例化模型. 模型的具体各种参数在Config文件中进行配置
     net = SSD(cfg)
     # 将模型移动到gpu上,cfg.DEVICE.MAINDEVICE定义了模型所使用的主GPU
