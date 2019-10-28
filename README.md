@@ -134,7 +134,7 @@ python -m visdom.server     运行
 **对模型进行测试,测试器支持单机单卡,单机多卡测试,但不支持多机多卡,cpu.**
  
 测试例子:
-```text
+```python
     net = SSD(cfg)
     # 将模型移动到gpu上,cfg.DEVICE.MAINDEVICE定义了模型所使用的主GPU
     net.to(cfg.DEVICE.MAINDEVICE)
@@ -153,7 +153,7 @@ python -m visdom.server     运行
 **检测过程本项目给出俩个例子,分别为单张图片检测与视频检测**
 
 单张图片检测,通过调用模型Detect_single_img方法实现.支持gpu与cpu,依模型运行环境而定.
-```text
+```python
     # 实例化模型
     net = SSD(cfg)
     # 使用cpu或gpu
@@ -170,7 +170,7 @@ python -m visdom.server     运行
 ```
 
 视频检测
-```text
+```python
     # 实例化模型
     net = SSD(cfg)
     # 使用cpu或gpu
