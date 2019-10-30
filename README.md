@@ -1,3 +1,13 @@
+GIthub使用指北:
+
+**1.想将项目拷贝到自己帐号下就fork一下.**
+
+**2.持续关注项目更新就star一下**
+
+**3.watch是设置接收邮件提醒的.**
+
+---
+
 # SSD-Pytorch 
 
 SSD目标检测算法(Single Shot MultiBox Detector)(简单,明了,易用,中文注释)
