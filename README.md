@@ -198,4 +198,12 @@ python -m visdom.server     运行
 目前完美支持ssd_300_vgg;ssd_512_vgg有基础网络,但没有添加对应的Config配置文件.
 后续会支持更多的网络以及其他功能,敬请期待.
 
+---
 
+support by jetbrains.
+
+![jetbrains](Images/jetbrains-variant-3.png)
+
+https://www.jetbrains.com/?from=SSD-Pytorch
+
+---
