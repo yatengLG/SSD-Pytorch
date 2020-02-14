@@ -200,7 +200,7 @@ python -m visdom.server     运行
 
 ---
 
-support by jetbrains.
+support by **jetbrains**.
 
 ![jetbrains](Images/jetbrains-variant-3.png)
 
