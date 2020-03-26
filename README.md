@@ -202,7 +202,7 @@ python -m visdom.server     运行
 
 support by **jetbrains**.
 
-<img width='300' alt='Jetbrains' src='https://github.com/yatengLG/SSD-Pytorch/Images/jetbrains-variant-3.png'>
+<img width='300' alt='Jetbrains' src='https://github.com/yatengLG/SSD-Pytorch/blob/master/Images/jetbrains-variant-3.png'>
 
 https://www.jetbrains.com/?from=SSD-Pytorch
 
