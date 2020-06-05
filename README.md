@@ -20,7 +20,7 @@ SSD目标检测算法(Single Shot MultiBox Detector)(简单,明了,易用,中文
 
 欢迎
 [![](https://img.shields.io/github/stars/yatengLG/SSD-Pytorch.svg)](https://github.com/yatengLG/SSD-Pytorch/stargazers) 
-[![](https://img.shields.io/github/forks/yatengLG/SSD-Pytorch.svg)](https://github.com/yatengLG/SSD-Pytorch/network/members)
+[![](https://img.shields.io/github/forks/yatengLG/SSD-Pytorch.svg)](https://github.com/yatengLG/SSD-Pytorch/network)
 
 ![image](Images/000133_det.jpg)
 
