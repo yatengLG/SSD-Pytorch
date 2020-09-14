@@ -100,6 +100,7 @@ SSD目标检测算法(Single Shot MultiBox Detector)(简单,明了,易用,中文
 |ssd300_vgg预训练模型|vgg_ssd300_voc0712.pkl|百度网盘链接: https://pan.baidu.com/s/1BxrH5oqmD7Nj3ORfSka00Q|提取码:k1b2
 |vgg预训练模型|vgg16_reducedfc.pth|百度网盘链接:https://pan.baidu.com/s/1BPqFeo0FtKZVrqM7Y-c6Vg|提取码:24se
 
+提供的SSD预训练模型，只是一个参考，请依据自身项目对Config参数进行设定。
 # Requirements
 
 
