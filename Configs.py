@@ -3,6 +3,8 @@
 from yacs.config import CfgNode as CN
 import os
 
+### 参数请结合自身项目设定，才能跑出较好的效果。
+
 project_root = os.getcwd()
 
 _C = CN()
