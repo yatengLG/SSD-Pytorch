@@ -24,7 +24,7 @@ class Trainer(object):
         trainer = Trainer(cfg)          # 实例化训练器
         trainer(net,train_dataset)      # 在train_dataset数据集上训练模型net
     """
-    def __init__(self, cfg, max_iter=None, batch_size=None, train_devices=None,
+    def __init__(self, cfg, max_iter=None, batch_size=None, num_workers = None, train_devices=None,
                  model_save_step=None, model_save_root=None, vis = None, vis_step=None):
         """
         训练器初始化
@@ -49,6 +49,10 @@ class Trainer(object):
         self.batch_size = cfg.TRAIN.BATCH_SIZE
         if batch_size:
             self.batch_size = batch_size
+
+        self.num_workers = cfg.TRAIN.NUM_WORKERS
+        if num_workers:
+            self.num_workers = num_workers
 
         self.train_devices = cfg.DEVICE.TRAIN_DEVICES
         if train_devices:
@@ -87,7 +91,7 @@ class Trainer(object):
             # raise TypeError('请用 DataParallel 包装模型. eg: model = DataParallel(model, device_ids=[0,1,2]),使用device_ids指定需要使用的gpu')
             model = DataParallel(model, device_ids=self.train_devices)
         self.model = model
-        data_loader = Our_Dataloader(dataset, batch_size=self.batch_size, shuffle=True)
+        data_loader = Our_Dataloader(dataset, batch_size=self.batch_size, shuffle=True, num_workers=self.num_workers)
         print(' Max_iter = {}, Batch_size = {}'.format(self.iterations, self.batch_size))
         print(' Model will train on cuda:{}'.format(self.train_devices))
 

@@ -25,17 +25,17 @@ _C.DEVICE.TEST_DEVICES = [0,1]  # 检测gpu
 _C.MODEL = CN()
 
 _C.MODEL.INPUT = CN()
-_C.MODEL.INPUT.IMAGE_SIZE = 300 # 模型输入尺寸
-_C.MODEL.INPUT.PIXEL_MEAN = [0, 0, 0] #数据集均值
-_C.MODEL.INPUT.PIXEL_STD = [1, 1, 1] # 数据集方差
+_C.MODEL.INPUT.IMAGE_SIZE = 300         # 模型输入尺寸
+_C.MODEL.INPUT.PIXEL_MEAN = [0, 0, 0]   # 数据集均值
+_C.MODEL.INPUT.PIXEL_STD = [1, 1, 1]    # 数据集方差
 
 _C.MODEL.ANCHORS = CN()
 _C.MODEL.ANCHORS.FEATURE_MAPS = [(38, 38), (19, 19), (10, 10), (5, 5), (3, 3), (1, 1)]  # 特征图大小
-_C.MODEL.ANCHORS.MIN_SIZES = [30, 60, 111, 162, 213, 264]
-_C.MODEL.ANCHORS.MAX_SIZES = [60, 111, 162, 213, 264, 315]
+_C.MODEL.ANCHORS.MIN_SIZES = [30, 60, 111, 162, 213, 264]   # 检测框大小
+_C.MODEL.ANCHORS.MAX_SIZES = [60, 111, 162, 213, 264, 315]  # 检测框大小
 _C.MODEL.ANCHORS.ASPECT_RATIOS = [[2], [2, 3], [2, 3], [2, 3], [2], [2]]    # 不同特征图上检测框绘制比例
 _C.MODEL.ANCHORS.BOXES_PER_LOCATION = [4, 6, 6, 6, 4, 4]  # 不同特征图上特征点的检测框数量
-_C.MODEL.ANCHORS.OUT_CHANNELS = [512, 1024, 512, 256, 256, 256]
+_C.MODEL.ANCHORS.OUT_CHANNELS = [512, 1024, 512, 256, 256, 256] # 特征图数量
 _C.MODEL.ANCHORS.CLIP = True            # 越界检测框截断,0~1
 _C.MODEL.ANCHORS.THRESHOLD = 0.5        # 交并比阈值
 _C.MODEL.ANCHORS.CENTER_VARIANCE = 0.1  # 解码
@@ -46,7 +46,7 @@ _C.TRAIN = CN()
 _C.TRAIN.NEG_POS_RATIO = 3      # 负正例比例
 _C.TRAIN.MAX_ITER = 120000      # 训练轮数
 _C.TRAIN.BATCH_SIZE = 10        # 训练批次
-
+_C.TRAIN.NUM_WORKERS = 4        # 数据数据所使用的线程数
 _C.OPTIM = CN()
 
 _C.OPTIM.LR = 1e-3              # 初始学习率.默认优化器为SGD

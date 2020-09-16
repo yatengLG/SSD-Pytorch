@@ -100,7 +100,7 @@ def Our_Dataloader(dataset,batch_size,shuffle=True,num_workers=2,drop_last=True,
     :param max_iteration:   迭代的总次数,默认1亿次,具体迭代次数,在取数据时进行判断会更为灵活
     :param shuffle:
     :param num_workers:
-    :param drop_last:
+    :param drop_last:       扔掉最后不够一个批次大小的数据
     :return:
     """
     if shuffle:
