@@ -61,5 +61,6 @@ class priorbox:
 if __name__ == '__main__':
     # 运行 查看生成的 检测框
     from Configs import _C as cfg
-    boxes = priorbox(cfg = cfg)()
-    print(len(boxes))
+    boxes = priorbox(cfg = cfg)() * 300
+    for box in boxes:
+        print(box)
